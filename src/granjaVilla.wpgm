@@ -1,0 +1,24 @@
+import wollok.game.*
+import plantas.*
+import granjero.*
+
+program granjaVilla {
+
+	//configuracion inicial:
+	//titulo-alto-ancho-imagendeFondo
+	game.title("GranjaVilla")
+	game.height(10)
+	game.width(10)
+	game.ground("ground.png")
+	
+	//personajes
+	game.addVisualCharacter(hector)
+	
+	//acciones de teclado
+	keyboard.m().onPressDo{hector.plantarMaiz() }
+	keyboard.t().onPressDo{hector.plantarTrigo() }
+	keyboard.o().onPressDo{hector.plantarTomaco() }
+	keyboard.r().onPressDo{hector.regar() }
+	game.start()
+
+}
